@@ -10,6 +10,8 @@ body{
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr 305px;
+    /*background: url(../img/floresta.jpg) no-repeat center fixed;
+    background-size: auto;*/
 }
 
 section{
@@ -18,9 +20,9 @@ section{
 }
 
 /*É possivel definir a região do elemento que será afetado pelo CSS no HTML*/
-header, main, footer, section{
+/*header, main, footer, section{
     border: 1px solid black
-}
+}*/
 header{
     display: flex;
     justify-content: space-between;
@@ -51,16 +53,29 @@ a{
     text-decoration: none;
 }
 
+main{
+    height: 100vh;
+}
 main>section{
     width: 100%;
-    height: 50%;
+    display: flex;
+    color: rgb(214, 103, 17);
+    border: 1px dashed red;
 }
 
 #introducao{
-    background-image: url(../img/floresta.jpg);
-    background-image: cover;
-    resize: both;
-    overflow: hidden;
+    background: url(../img/floresta.jpg) no-repeat center fixed;
+    background-size: auto;
+    align-items: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    row-gap: 50px;
+    text-align: center;
+}
+
+:-webkit-any(article, aside, nav, section) h1{
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
 }
 
 #pessoal{
