@@ -14,11 +14,6 @@ body{
     background-size: auto;*/
 }
 
-section{
-    display: flex;
-    justify-content: center;
-}
-
 /*É possivel definir a região do elemento que será afetado pelo CSS no HTML*/
 /*header, main, footer, section{
     border: 1px solid black
@@ -29,17 +24,7 @@ header{
     padding: 0px 20px;
     font-weight: 700;
 }
-header #avatar{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    overflow: hidden; /*Serve para conter a imagem dentro do circulo sem trespassar a borda*/
-}
-header>.items{
-    display: flex;
-    align-items: center;
-}
+
 header>nav>ul{
     display: flex;
 }
@@ -49,38 +34,31 @@ header>nav>ul>li>a{
     font-size: 1rem;
 }
 
-a{
-    text-decoration: none;
-}
-
 main{
     height: 100vh;
 }
 main>section{
     width: 100%;
+    height: auto;
     display: flex;
     color: rgb(214, 103, 17);
     border: 1px dashed red;
 }
 
-#introducao{
-    background: url(../img/floresta.jpg) no-repeat center fixed;
-    background-size: auto;
-    align-items: center;
-    display: grid;
-    grid-template-rows: auto auto auto;
-    row-gap: 50px;
-    text-align: center;
+section{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2.7rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 :-webkit-any(article, aside, nav, section) h1{
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
-}
-
-#pessoal{
-    background-color: aqua;
-}
-#pessoal:hover{
-    background-color: aquamarine;
 }
