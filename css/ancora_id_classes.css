@@ -4,8 +4,18 @@
     border-radius: 50%;
     margin-right: 10px;
     overflow: hidden; /*Serve para conter a imagem dentro do circulo sem trespassar a borda*/
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    animation: gradient 15s ease infinite;
+    animation-name: padraoCores;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cabecario{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
 }
 
 #introducao{
@@ -18,35 +28,74 @@
     min-height: 80vh;
     max-height: 120vh;
     position: relative;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 180%;
-    animation: gradient 15s ease infinite;
+    animation-name: padraoCores;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-@keyframes gradient{ /*Brinque um pouco aqui, até ficar com uma animação fluida*/
+@keyframes padraoCores{ /*Brinque um pouco aqui, até ficar com uma animação fluida (feito)*/
     0%{
-        background-position: 0% 50%;
+        background-color: #ee7752;
     }
-
+    25%{
+        background-color: #e73c7e;
+    }
     50%{
-        background-position: 50% 100%;
+        background-color: #a529be;
     }
-
+    75%{
+        background-color: #23d5ab;
+    }
     100%{
-        background-position: 100% 50%;
-    }
-    50%{
-        background-position: 50% 0%;
+        background-color: #23a6d5;
     }
 }
 
-#pessoal{
-    background-color: aqua;
-}
-#pessoal:hover{
-    background-color: aquamarine;
+#principal{
+    background-color: white;
+    padding: 12rem 0;
 }
 
+@media only screen  and (max-width: 56.25em){
+    #principal{
+        padding: 8rem  0;
+    }
+}
+
+#conteudo_principal{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+}
+
+@media only screen  and (max-width: 56.25em){
+    #conteudo_principal{
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+}
+
+/*#conteudo_principal>div{
+    display: block;
+}*/
+#conteudo_principal_titulo{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+#conteudo_principal_detalhes{
+    font-size: 1.3rem;
+    color: grey;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+#conteudo_principal_detalhes:last-child{
+    margin-bottom: 4rem;
+}
 
 .latin{
     margin: 3rem auto 0 auto;
@@ -88,6 +137,14 @@ header>.items{
     transition: transform .3s; 
 }
 
+.botao_principal_tema{
+    animation-name: padraoCores;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: white;
+}
+
 .redes_sociais{
     position: absolute;
     top: 50%;
@@ -104,8 +161,36 @@ header>.items{
 .redes_sociais>div>a>img{
     width: 100%;
 }
+
 .link_social{
     width: 100%;
     display: block;
     transition: background .3s;
+}
+
+.container_principal{
+    max-width: 120rem;
+    margin: auto;
+    width: 94%;
+}
+
+.titulo_secao{
+    display: block;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.subtitulo_secao{
+    display: block;
+    text-align: center;
+    color: #777;
+    font-size: 1.8rem;
+    font-weight: 500;
+    max-width: 80rem;
+    margin: auto;
+    line-height: 1.6;
 }
