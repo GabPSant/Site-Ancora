@@ -54,7 +54,7 @@
 
 #principal{
     background-color: white;
-    padding: 12rem 0;
+    padding: 4rem 0;
 }
 
 @media only screen  and (max-width: 56.25em){
@@ -65,25 +65,20 @@
 
 #conteudo_principal{
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.4rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
 }
 
 @media only screen  and (max-width: 56.25em){
     #conteudo_principal{
         grid-template-columns: 1fr;
-        gap: 8rem;
+        gap: 2.4rem;
     }
 }
 
 /*#conteudo_principal>div{
     display: block;
 }*/
-#conteudo_principal_titulo{
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-bottom: 3rem;
-}
 
 #conteudo_principal_detalhes{
     font-size: 1.3rem;
@@ -94,7 +89,18 @@
 }
 
 #conteudo_principal_detalhes:last-child{
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+#habilidades{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projetos{
+    background-color: white;
+    padding: 4rem 0;
+
 }
 
 .latin{
@@ -117,8 +123,9 @@ header>.items{
     text-align: center;
 }
 .botao_projetos{
-    padding: 1.5rem 3.6rem;
+    padding: 1.5rem 1.7rem;
     font-size: 1.4rem;
+    margin: auto;
 }
 
 .botao_projetos:hover{
@@ -193,4 +200,27 @@ header>.items{
     max-width: 80rem;
     margin: auto;
     line-height: 1.6;
+}
+
+.conteudo_principal_titulo{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.habilidades_habilidade{
+    margin: 0 1.5rem 1.5rem 0;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.3rem;
+    background: rgba(153,153,153,0.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #777;
+}
+
+.projeto{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    margin-bottom: 7rem;
 }
