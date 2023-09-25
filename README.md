@@ -7,4 +7,5 @@
   - Geralmente são usados icones ao invés de imagens para demonstrar os icónes nas páginas web
 - Quando terminar o site, altere os scripts css para scss/sass. 
   - [Site do Sass](https://sass-lang.com/guide/)
+    - [Site do Sass (português)](https://sass-guidelin.es/pt/)
   - [Site do conversor](https://www.cssportal.com/css-to-scss/)
